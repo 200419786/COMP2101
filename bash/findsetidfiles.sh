@@ -20,4 +20,4 @@ echo ""
 
 #task 2
 echo "Find Top Largest files"
-find / -type f -executable -perm -2000 -4000 -size +0.1c -ls 2>/dev/null | sort -k 3
+find / -type f -printf '%s %p %k MB\n' 2>/dev/null| sort -nr | head -10
