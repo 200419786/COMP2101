@@ -7,6 +7,11 @@
 #    the sum of the 3 numbers with a label
 #    the product of the 3 numbers with a label
 
+#task 1
+firstnum=5
+secondnum=4
+unset firstnum
+unset secondnum
 
 read -p "Please Enter first number - " firstnum
 read -p "Please Enter second number - " secondnum
