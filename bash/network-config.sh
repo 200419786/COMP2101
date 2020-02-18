@@ -37,7 +37,7 @@ lanAdd=$(ip a s $(ip a |awk '/: e/{gsub(/:/,"");print $2}')|awk '/inet /{gsub(/\
 host=$(hostname)
 lanHost=$(getent hosts $lanAdd | awk '{print $2}')
 extIP=$(curl -s icanhazip.com)
-extName=$(getent hosts $(curl -s icanhazip.com) | awk '{print $2}')
+extName=$(getent hosts $extIP)
 routerIP=$(ip route show default | awk '{print $3}')
 rHost=$(getent hosts $routerIP | awk '{print $2}')
 
