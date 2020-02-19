@@ -61,7 +61,7 @@ fi
 
 
 
-myVar >>EOF
+read -r -d '' VAR <<EOF
 
 Welcome to planet "$hostname", "$title $USER!"
 
@@ -69,3 +69,5 @@ Today is "$date" at "$time"
 
 
 EOF
+
+echo "$VAR" | cowsay -n
